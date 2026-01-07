@@ -1,0 +1,22 @@
+# fonction : 
+
+--> generata lalana fromdatabase
+--> création d'obstacles 
+
+
+# Omeo anah ny temp anah voiture iray anaovan'ilay trajet : distance/vitesseMoyenne
+# oméo ny làlana akaiky indrindra makéo @ A -> 
+# oméo ny làlana haingana indrindra considéré les obstacles
+
+
+# affichage :
+--> formulaire iray manisy ny lista de lalàna ao@ database sy ny taombila :
+    import lalana (oracle) sy ny taomobila (postgres)
+    -génerer le graph aprés
+
+--> formulaire de création d'obstacle kilométreDebut kilométreFin (à vérifier si < lalana.distance)
+    -à insérer aussi dans oracle !!!
+
+--> bouton démarrer 
+--> bouton accélérer 
+    
