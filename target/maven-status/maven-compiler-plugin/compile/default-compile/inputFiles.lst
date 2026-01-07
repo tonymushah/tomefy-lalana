@@ -1,9 +1,0 @@
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/Main.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/data/connexion/Oracle11Connect.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/data/connexion/PostgresConnect.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/model/car/Voiture.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/model/car/VoitureType.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/model/road/Lalana.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/model/road/LalanaObstacle.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/model/road/Point.java
-/home/tomefy/Documents/prog/lalana/src/main/java/lalana/model/road/Trajet.java
