@@ -1,5 +1,7 @@
 package lalana.model.road;
 
+import java.util.Vector;
+
 public class Lalana {
     int id;
     String nom;
