@@ -11,11 +11,11 @@ import mg.tonymushah.dbconnection.utils.interfaces.TablesActions;
 public class Point implements TablesActions {
 	@PrimaryKey
 	@Column(name = "id", isNumber = true)
-	int id;
+	private int id;
 	@Column(name = "x", isNumber = true)
-	double x;
+	private double x;
 	@Column(name = "y", isNumber = true)
-	double y;
+	private double y;
 
 	public int getId() {
 		return id;

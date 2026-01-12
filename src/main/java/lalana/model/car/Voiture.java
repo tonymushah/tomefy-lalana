@@ -12,18 +12,18 @@ import mg.tonymushah.dbconnection.utils.interfaces.TablesActions;
 public class Voiture implements TablesActions {
 	@Column(name = "id", isNumber = true)
 	@PrimaryKey
-	int id;
+	private int id;
 
 	@Column(name = "idVoitureType", isNumber = true)
-	int type;
+	private int type;
 
 	@Column(name = "longueur", isNumber = true)
-	double longueur;
+	private double longueur;
 	@Column(name = "largeur", isNumber = true)
-	double largeur;
+	private double largeur;
 	// pour vérifier que la vitesse moyenne choisi est valide
 	@Column(name = "vitesseMax", isNumber = true)
-	double vitesseMax;
+	private double vitesseMax;
 
 	public Voiture() {
 	}

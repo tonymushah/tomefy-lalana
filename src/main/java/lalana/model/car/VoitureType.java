@@ -11,9 +11,9 @@ import mg.tonymushah.dbconnection.utils.interfaces.TablesActions;
 public class VoitureType implements TablesActions {
 	@PrimaryKey
 	@Column(name = "id", isNumber = true)
-	int id;
+	private int id;
 	@Column(name = "libele")
-	String libele; // 4*4 na caterella ,J9 , ...
+	private String libele; // 4*4 na caterella ,J9 , ...
 
 	// TODO : autre info ici
 
