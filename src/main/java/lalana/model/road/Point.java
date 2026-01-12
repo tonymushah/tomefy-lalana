@@ -1,5 +1,6 @@
 package lalana.model.road;
 
+import javafx.geometry.Point2D;
 import mg.tonymushah.dbconnection.DBConnect;
 import mg.tonymushah.dbconnection.utils.Predicate;
 import mg.tonymushah.dbconnection.utils.annotations.Column;
@@ -78,5 +79,9 @@ public class Point implements TablesActions {
 			point = new Point();
 		}
 		return Math.sqrt(Math.pow(this.getX() - point.getX(), 2) + Math.pow(this.getY() - point.getY(), 2));
+	}
+
+	public Point2D toPoint2d() {
+		return new Point2D(this.getX(), this.getY());
 	}
 }
