@@ -6,14 +6,14 @@ INSERT INTO tablepoint (id, x, y) VALUES (4, 40.0, 50.0);
 INSERT INTO tablepoint (id, x, y) VALUES (5, 50.5, 70.5);
 
 -- Insert test data into lalana
-INSERT INTO lalana (id, nom, pointArrivee, pointDepart, distance, largeur) 
-VALUES (1, 'Route A', 1, 2, 5.5, 10.0);
-INSERT INTO lalana (id, nom, pointArrivee, pointDepart, distance, largeur) 
-VALUES (2, 'Route B', 2, 3, 15.0, 8.0);
-INSERT INTO lalana (id, nom, pointArrivee, pointDepart, distance, largeur) 
-VALUES (3, 'Route C', 3, 4, 7.5, 12.0);
-INSERT INTO lalana (id, nom, pointArrivee, pointDepart, distance, largeur) 
-VALUES (4, 'Route D', 4, 5, 10.0, 6.5);
+INSERT INTO lalana (id, nom, pointArrivee, pointDepart, largeur) 
+VALUES (1, 'Route A', 1, 2, 10.0);
+INSERT INTO lalana (id, nom, pointArrivee, pointDepart, largeur) 
+VALUES (2, 'Route B', 2, 3, 8.0);
+INSERT INTO lalana (id, nom, pointArrivee, pointDepart, largeur) 
+VALUES (3, 'Route C', 3, 4, 12.0);
+INSERT INTO lalana (id, nom, pointArrivee, pointDepart, largeur) 
+VALUES (4, 'Route D', 4, 5, 6.5);
 
 -- Insert test data into sous_lalana_correspondance
 INSERT INTO sous_lalana_correspondance (id, idLalanaMere, idLalanaFille, idOrdApparition) 

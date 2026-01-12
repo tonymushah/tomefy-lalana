@@ -10,7 +10,8 @@ CREATE TABLE lalana (
 	nom VARCHAR2(255) not null,
 	pointArrivee NUMBER not null,
 	pointDepart NUMBER not null,
-	distance NUMBER not null,
+	-- peut etre calculer dans l'application avec la formule de la distance euclidienne
+	-- distance NUMBER not null, 
 	largeur NUMBER not null,
 	CONSTRAINT fk_lalana_pointArrivee FOREIGN KEY (pointArrivee) REFERENCES tablepoint(id),
 	CONSTRAINT fk_lalana_pointDepart FOREIGN KEY (pointDepart) REFERENCES tablepoint(id)
