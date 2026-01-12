@@ -1,4 +1,4 @@
-package lalana.model.road;
+package lalana.data.model.road;
 
 import java.util.Vector;
 

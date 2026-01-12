@@ -1,4 +1,4 @@
-package lalana.model.road;
+package lalana.data.model.road;
 
 import javafx.geometry.Point2D;
 import mg.tonymushah.dbconnection.DBConnect;

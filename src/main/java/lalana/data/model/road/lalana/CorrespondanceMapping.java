@@ -1,4 +1,4 @@
-package lalana.model.road.lalana;
+package lalana.data.model.road.lalana;
 
 import mg.tonymushah.dbconnection.utils.annotations.Column;
 import mg.tonymushah.dbconnection.utils.annotations.PrimaryKey;

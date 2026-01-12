@@ -1,4 +1,4 @@
-package lalana.model.car;
+package lalana.data.model.car;
 
 import mg.tonymushah.dbconnection.DBConnect;
 import mg.tonymushah.dbconnection.utils.Predicate;

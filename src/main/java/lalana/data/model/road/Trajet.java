@@ -1,6 +1,6 @@
-package lalana.model.road;
+package lalana.data.model.road;
 
-import lalana.model.car.Voiture;
+import lalana.data.model.car.Voiture;
 
 public class Trajet {
     Voiture v;
