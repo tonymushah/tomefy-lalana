@@ -84,17 +84,16 @@ public class Voiture implements TablesActions {
 	// [x] delete :
 	// [x] update :
 
-	public Voiture[] findAll(DBConnect connect) throws Exception {
+	public static Voiture[] findAll(DBConnect connect) throws Exception {
 		return connect.select(Voiture.class);
 	}
 
-	public Voiture findById(DBConnect connect, int id) throws Exception {
+	public static Voiture findById(DBConnect connect, int id) throws Exception {
 		return connect.selectWhere(Voiture.class, null,
 				new Predicate[] { new Predicate("id", String.valueOf(id), "and", false) })[0];
 	}
 
-	// TODO
-	public VoitureType getVoitureType(DBConnect connect) {
-		throw new UnsupportedOperationException("not yet implemented");
+	public VoitureType getVoitureType(DBConnect connect) throws Exception {
+		return VoitureType.findById(connect, this.getType());
 	}
 }
