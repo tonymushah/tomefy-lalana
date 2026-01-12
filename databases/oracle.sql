@@ -19,8 +19,8 @@ CREATE TABLE lalana (
 
 CREATE TABLE sous_lalana_correspondance (
 	id NUMBER PRIMARY KEY,
-	idLalanaMere NUMBER not null,
-	idLalanaFille NUMBER not null,
+	idLalanaMere NUMBER,
+	idLalanaFille NUMBER,
 	idOrdApparition NUMBER not null,
 	CONSTRAINT fk_sous_lalana_mere FOREIGN KEY (idLalanaMere) REFERENCES lalana(id),
 	CONSTRAINT fk_sous_lalana_fille FOREIGN KEY (idLalanaFille) REFERENCES lalana(id)
