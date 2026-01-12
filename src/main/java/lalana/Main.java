@@ -1,8 +1,15 @@
 package lalana;
 
+import java.util.Vector;
+
+import io.github.cdimascio.dotenv.Dotenv;
+import io.github.cdimascio.dotenv.DotenvEntry;
 import javafx.application.Application;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
@@ -33,6 +40,15 @@ public class Main extends Application {
 				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.");
 		text.setWrappingWidth(200);
 		root.getChildren().add(new TextFlow(text));
+
+		ObservableList<String> list = FXCollections.observableList(new Vector<String>());
+		ListView<String> listView = new ListView<>(list);
+
+		for (DotenvEntry e : Dotenv.load().entries()) {
+			list.add(String.format("%s => %s", e.getKey(), e.getValue()));
+		}
+
+		root.getChildren().add(listView);
 
 		arg0.setScene(scene);
 		arg0.setTitle("lalana");
