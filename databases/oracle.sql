@@ -17,6 +17,7 @@ CREATE TABLE lalana (
 	CONSTRAINT fk_lalana_pointDepart FOREIGN KEY (pointDepart) REFERENCES tablepoint(id)
 );
 
+-- p*tn, je comprend pas l'interet de ce truc ???
 CREATE TABLE sous_lalana_correspondance (
 	id NUMBER PRIMARY KEY,
 	idLalanaMere NUMBER,
