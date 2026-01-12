@@ -1,5 +1,8 @@
 package lalana.data.connexion;
 
+import java.sql.Connection;
+import java.sql.SQLException;
+
 import io.github.cdimascio.dotenv.Dotenv;
 import mg.tonymushah.dbconnection.PostGresConnect;
 
@@ -16,4 +19,11 @@ public class PostgresConnect extends PostGresConnect {
 	}
 	// CONNEXTION sur l'info de la voiture
 
+	@Override
+	public void close() throws SQLException {
+		Connection connection = this.getConnection();
+		if (connection != null) {
+			super.close();
+		}
+	}
 }
