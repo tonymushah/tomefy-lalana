@@ -12,6 +12,7 @@
     <properties>
         <maven.compiler.source>25</maven.compiler.source>
         <maven.compiler.target>25</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
@@ -40,6 +41,13 @@
             <groupId>io.github.cdimascio</groupId>
             <artifactId>dotenv-java</artifactId>
             <version>3.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>mg.tonymushah</groupId>
+            <artifactId>java-dbconnect</artifactId>
+            <version>1.0-SNAPSHOT.1</version>
+            <scope>system</scope>
+            <systemPath>${project.basedir}/src/main/resources/lib/java-dbconnect-1.0-SNAPSHOT.1.jar</systemPath>
         </dependency>
     </dependencies>
     <build>
