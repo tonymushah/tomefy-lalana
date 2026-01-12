@@ -35,6 +35,7 @@ CREATE TABLE obstacle (
 	CONSTRAINT fk_obstacle_lalana FOREIGN KEY (idLalanaMere) REFERENCES lalana(id)
 );
 
+/*
 CREATE SEQUENCE seq_tablepoint START WITH 1 INCREMENT BY 1 NOCACHE NOCYCLE;
 
 CREATE
@@ -95,3 +96,4 @@ FROM
 END;
 
 /
+*/
