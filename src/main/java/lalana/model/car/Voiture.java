@@ -1,6 +1,8 @@
 
 package lalana.model.car;
 
+import javax.naming.OperationNotSupportedException;
+
 import mg.tonymushah.dbconnection.DBConnect;
 import mg.tonymushah.dbconnection.utils.Predicate;
 import mg.tonymushah.dbconnection.utils.annotations.Column;
@@ -89,5 +91,10 @@ public class Voiture implements TablesActions {
 	public Voiture findById(DBConnect connect, int id) throws Exception {
 		return connect.selectWhere(Voiture.class, null,
 				new Predicate[] { new Predicate("id", String.valueOf(id), "and", false) })[0];
+	}
+
+	// TODO
+	public VoitureType getVoitureType(DBConnect connect) {
+		throw new UnsupportedOperationException("not yet implemented");
 	}
 }
