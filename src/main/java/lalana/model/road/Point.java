@@ -51,10 +51,10 @@ public class Point implements TablesActions {
 	}
 
 	// FONCTION à faire :
-	// TODO insert :
-	// TODO find :
-	// TODO delete :
-	// TODO update :
+	// [x] insert :
+	// [x] find :
+	// [x] delete :
+	// [x] update :
 
 	public static Point[] findAll(DBConnect connect) throws Exception {
 		return connect.select(Point.class);
