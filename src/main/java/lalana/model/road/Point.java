@@ -64,4 +64,19 @@ public class Point implements TablesActions {
 		return connect.selectWhere(Point.class, null,
 				new Predicate[] { new Predicate("id", String.valueOf(id), "and", false) })[0];
 	}
+
+	/**
+	 * 
+	 * NOTE: If `point` is null, it will calcute to the origin point (0, 0) instead.
+	 * 
+	 * @param point
+	 * @return distance to between `this` and the `point` parameter
+	 * 
+	 */
+	public double distance(Point point) {
+		if (point == null) {
+			point = new Point();
+		}
+		return Math.sqrt(Math.pow(this.getX() - point.getX(), 2) + Math.pow(this.getY() - point.getY(), 2));
+	}
 }
