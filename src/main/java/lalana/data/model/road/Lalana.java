@@ -104,6 +104,7 @@ public class Lalana implements TablesActions {
 		return this.getPointDepart(connect).distance(this.getPointArrivee(connect));
 	}
 
+	// TODO implement this thingy. I dunno how it works lol
 	public Vector<Lalana> getSousLalana(DBConnect connect) {
 		throw new UnsupportedOperationException("not yet supported");
 	}
