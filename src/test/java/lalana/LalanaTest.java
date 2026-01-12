@@ -1,12 +1,10 @@
 package lalana;
 
 import static org.junit.Assert.assertNotNull;
-import java.nio.file.Path;
 
 import org.junit.Test;
 
 import io.github.cdimascio.dotenv.Dotenv;
-import io.github.cdimascio.dotenv.DotenvEntry;
 import lalana.data.connexion.Oracle11Connect;
 import lalana.data.connexion.PostgresConnect;
 import mg.tonymushah.dbconnection.DBConnect;
