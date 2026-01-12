@@ -1,8 +1,6 @@
 
 package lalana.model.car;
 
-import javax.naming.OperationNotSupportedException;
-
 import mg.tonymushah.dbconnection.DBConnect;
 import mg.tonymushah.dbconnection.utils.Predicate;
 import mg.tonymushah.dbconnection.utils.annotations.Column;
