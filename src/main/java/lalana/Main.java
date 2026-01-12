@@ -17,8 +17,24 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import lalana.ui.AppContext;
 
 public class Main extends Application {
+
+	private AppContext appContext;
+
+	@Override
+	public void init() throws Exception {
+		super.init();
+		appContext = new AppContext();
+	}
+
+	@Override
+	public void stop() throws Exception {
+		super.stop();
+		if (appContext != null)
+			appContext.close();
+	}
 
 	public static void main(String[] args) {
 		launch(args);
