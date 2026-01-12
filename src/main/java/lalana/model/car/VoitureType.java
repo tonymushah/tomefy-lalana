@@ -37,4 +37,28 @@ public class VoitureType implements TablesActions {
 				new Predicate[] { new Predicate("id", String.valueOf(id), "and", false) })[0];
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getLibele() {
+		return libele;
+	}
+
+	public void setLibele(String libele) {
+		this.libele = libele;
+	}
+
+	public VoitureType() {
+	}
+
+	public VoitureType(int id, String libele) {
+		this.setId(id);
+		this.setLibele(libele);
+	}
+
 }
