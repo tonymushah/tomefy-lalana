@@ -1,3 +1,7 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+	"[java]": {
+		"editor.suggest.snippetsPreventQuickSuggestions": false,
+		"editor.formatOnSave": true
+	}
 }
