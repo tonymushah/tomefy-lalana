@@ -1,0 +1,1 @@
+- Utiliser `install-db-connect.sh` pour installer le jar locallement

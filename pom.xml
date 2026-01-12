@@ -41,12 +41,11 @@
 			<artifactId>dotenv-java</artifactId>
 			<version>3.2.0</version>
 		</dependency>
+		<!-- Use the `./install-db-connect.sh` to install the jar locally-->
 		<dependency>
 			<groupId>mg.tonymushah</groupId>
 			<artifactId>java-dbconnect</artifactId>
 			<version>1.0-SNAPSHOT.1</version>
-			<scope>system</scope>
-			<systemPath>${project.basedir}/src/main/resources/lib/java-dbconnect-1.0-SNAPSHOT.1.jar</systemPath>
 		</dependency>
 	</dependencies>
 	<build>
@@ -66,6 +65,10 @@
 				<configuration>
 					<mainClass>lalana.Main</mainClass>
 				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>3.1.2</version>
 			</plugin>
 		</plugins>
 	</build>
