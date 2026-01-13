@@ -42,6 +42,7 @@ public class Main extends Application {
 
 	@Override
 	public void start(Stage arg0) throws Exception {
+		appContext.setMainStage(arg0);
 		Pane root = new VBox();
 
 		Scene scene = new Scene(new ScrollPane(root), 500, 500, Color.rgb(100, 200, 0, 1.0));

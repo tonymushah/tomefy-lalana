@@ -1,6 +1,7 @@
 package lalana.ui;
 
 import io.github.cdimascio.dotenv.Dotenv;
+import javafx.stage.Stage;
 import lalana.data.connexion.Oracle11Connect;
 import lalana.data.connexion.PostgresConnect;
 import mg.tonymushah.dbconnection.DBConnect;
@@ -8,6 +9,7 @@ import mg.tonymushah.dbconnection.DBConnect;
 public class AppContext implements AutoCloseable {
 	private DBConnect oracle;
 	private DBConnect postgres;
+	private Stage mainStage;
 
 	public DBConnect getOracle() {
 		return oracle;
@@ -31,5 +33,13 @@ public class AppContext implements AutoCloseable {
 		if (postgres != null) {
 			postgres.close();
 		}
+	}
+
+	public Stage getMainStage() {
+		return mainStage;
+	}
+
+	public void setMainStage(Stage mainStage) {
+		this.mainStage = mainStage;
 	}
 }
