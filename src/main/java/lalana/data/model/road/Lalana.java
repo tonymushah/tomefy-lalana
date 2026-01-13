@@ -1,7 +1,11 @@
 package lalana.data.model.road;
 
+import java.util.List;
+import java.util.Optional;
+import java.util.TreeMap;
 import java.util.Vector;
 
+import lalana.data.model.road.lalana.CorrespondanceMapping;
 import mg.tonymushah.dbconnection.DBConnect;
 import mg.tonymushah.dbconnection.utils.Predicate;
 import mg.tonymushah.dbconnection.utils.annotations.Column;
@@ -105,7 +109,34 @@ public class Lalana implements TablesActions {
 	}
 
 	// TODO implement this thingy. I dunno how it works lol
-	public Vector<Lalana> getSousLalana(DBConnect connect) {
-		throw new UnsupportedOperationException("not yet supported");
+	public List<Lalana> getSousLalana(DBConnect connect) throws Exception {
+
+		CorrespondanceMapping[] correspondance = connect.selectWhere(CorrespondanceMapping.class, null,
+				new Predicate[] { new Predicate("idLalanaMere", String.valueOf(this.getId()), "and", false) });
+
+		TreeMap<Integer, Lalana> c = new TreeMap<>();
+		// Je ne sais pas si ca marche avec des routes embranche
+
+		for (CorrespondanceMapping lalana : correspondance) {
+			c.put(lalana.getOrd(), Lalana.findById(connect, lalana.getLalanaFille()));
+		}
+		return new Vector<>(c.values());
+	}
+
+	// Je ne sais pas si tokony `List<Lalana>` sa `Optional<Lalana>` no atao eto
+	public Optional<Lalana> getLalanaMere(DBConnect connect) throws Exception {
+		CorrespondanceMapping[] correspondances = connect.selectWhere(CorrespondanceMapping.class, null,
+				new Predicate[] { new Predicate("idLalanaFille", String.valueOf(this.getId()), "and", false) });
+		if (correspondances.length == 0) {
+			return Optional.empty();
+		} else {
+			return Optional.ofNullable(Lalana.findById(connect, correspondances[0].getLalanaMere()));
+		}
+	}
+
+	public LalanaObstacle[] getObstacles(DBConnect connect) throws Exception {
+		return connect.selectWhere(LalanaObstacle.class, null, new Predicate[] {
+				new Predicate("idLalanaMere", String.valueOf(this.getId()), "and", false)
+		});
 	}
 }
