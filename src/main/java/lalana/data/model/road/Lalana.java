@@ -134,6 +134,15 @@ public class Lalana implements TablesActions {
 		}
 	}
 
+	public List<Lalana> getSousLalanaIfHaveMere(DBConnect connect) throws Exception {
+		Optional<Lalana> lalanaMere = this.getLalanaMere(connect);
+		if (lalanaMere.isPresent()) {
+			return lalanaMere.get().getSousLalana(connect);
+		} else {
+			return this.getSousLalana(connect);
+		}
+	}
+
 	public LalanaObstacle[] getObstacles(DBConnect connect) throws Exception {
 		return connect.selectWhere(LalanaObstacle.class, null, new Predicate[] {
 				new Predicate("idLalanaMere", String.valueOf(this.getId()), "and", false)
