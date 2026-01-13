@@ -5,6 +5,7 @@ import java.util.Optional;
 import java.util.TreeMap;
 import java.util.Vector;
 
+import lalana.data.model.car.Voiture;
 import lalana.data.model.road.lalana.CorrespondanceMapping;
 import mg.tonymushah.dbconnection.DBConnect;
 import mg.tonymushah.dbconnection.utils.Predicate;
@@ -63,6 +64,10 @@ public class Lalana implements TablesActions {
 
 	public double getLargeurADoubleSens() {
 		return largeurADoubleSens;
+	}
+
+	public double getLargeurAUnSens() {
+		return this.getLargeurADoubleSens() / 2;
 	}
 
 	public void setLargeurADoubleSens(double largeurADoubleSens) {
@@ -147,5 +152,9 @@ public class Lalana implements TablesActions {
 		return connect.selectWhere(LalanaObstacle.class, null, new Predicate[] {
 				new Predicate("idLalanaMere", String.valueOf(this.getId()), "and", false)
 		});
+	}
+
+	public double tempsVoiture(DBConnect connect, double vitesseMoyenne) throws Exception {
+		return this.distance(connect) / vitesseMoyenne;
 	}
 }
